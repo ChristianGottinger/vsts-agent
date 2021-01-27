@@ -20,3 +20,6 @@ Optionally, you can control the pool and agent work directory by using additiona
 | AZP_AGENT_NAME       | Agent name (default value: the container hostname).          |
 | AZP_POOL             | Agent pool name (default value: `Default`).                  |
 | AZP_WORK             | Work directory (default value: `_work`).                     |
+
+
+Find all details here: https://github.com/MicrosoftDocs/azure-devops-docs/blob/master/docs/pipelines/agents/docker.md
