@@ -16,7 +16,18 @@ RUN apt-get update \
         libicu60 \
         libunwind8 \
         netcat \
-        libssl1.0
+        libssl1.0 \
+        apt-transport-https \
+        gnupg-agent \
+        software-properties-common
+        
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+RUN add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+RUN apt-get update \
+&& apt-get install docker-ce-cli 
 
 WORKDIR /azp
 
